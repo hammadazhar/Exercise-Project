@@ -1,4 +1,5 @@
 # In this program user give the file name and data to store!
+
 fileName1 = input("1st file name plz: ")
 text = input("Add data in file: ")
 f = open(fileName1+'.file', "w")
