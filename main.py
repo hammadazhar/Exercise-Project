@@ -1,32 +1,21 @@
-# In this program user give the file name and data to store!
-fileName1 = input("1st file name plz: ")
-text = input("Add data in file: ")
-f = open(fileName1+'.file', "w")
-f.write(text)
-f.close()
+class Todo:
 
-f = open("all file name.txt", 'a')
-f.write(fileName1)
-f.close()
+    def __init__(self, file_name, data,):
+        self.file_name = file_name
+        self.data = data
 
-fileName2 = input("2nd file name plz: ")
-text = input("Add data in file: ")
-f = open(fileName2+'.file', "w")
-f.write(text)
-f.close()
+        f = open(file_name + ".txt", "a")
+        f.write(data)
+        f.close()
 
-f = open("all file name.txt", 'a')
-f.write("\n"+fileName2)
-f.close()
 
-fileName3 = input("3rd file name plz: ")
-text = input("Add data in file: ")
-f = open(fileName3+'.file', "w")
-f.write(text)
-f.close()
+f1 = Todo(input("File name plz: "), input("Add data in the file: "))
+f2 = Todo(input("2nd File name plz: "), input("Add data in the file: "))
 
-f = open("all file name.txt", 'a')
-f.write("\n"+fileName3)
-f.close()
+x = int(input('Any file do you want to see type the name plz: '))
 
-print("\nThe given content is written on the file successfully!")
+if x == 1:
+    print(f1.__dict__)
+
+elif x == 2:
+    print(f2.__dict__)
